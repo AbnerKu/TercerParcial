@@ -1,0 +1,61 @@
+<h1>
+  {{title}}
+</h1>
+<p [hidden]="!visible">Adiós</p>
+
+<form>
+  <label>¿Cómo te llamas?</label>
+
+
+  <!--Expresiones-->
+  <p>Soy capaz de multiplicar por {{7 * 26}} tus habilidades</p>
+  <!--Eventos-->
+  <a (click)="visible=true">Saludar</a>
+  <!--Propiedades-->
+  <p [hidden]="!visible">Hola Mundo!!!</p>
+</form>
+
+<h3>Mi carrera es:
+  <em>{{carreras[1]}}</em>
+</h3>
+<ul>
+  <li *ngFor="let carrera of carreras">
+    {{carrera}}
+  </li>
+</ul>
+<ul>
+    <li *ngFor="let estado of estados">
+        {{estado.nombre}} 
+         <b>{{estado.clave}}</b>
+      </li>
+
+<div class="container">
+  <input [(ngModel)]='name'>
+<br>
+<h1>Hello {{name}}</h1>
+</div>
+  <h5>Listado</h5>
+  <div style="float:left;padding:10px;margin:0 aunto;" *ngIf="estados">
+
+    <select [(ngModel)]="selected">
+      <option *ngFor="let est of estados" [(ngValue)]="est.clave">{{est.nombre}}</option>
+    </select>
+
+    <p>{{selected}}</p>
+
+  </div>
+
+<a (click)="mostrar()">{{leyenda}}</a>
+<br>
+<div>
+  <h1>Operaciones</h1>
+  <input [(ngModel)]='numero1'>
+  <input [(ngModel)]='numero2'>
+  <br>
+  <h2>Suma ={{numero1 * 1 + numero2 * 1}}</h2>
+  <h2>Resta ={{numero1-numero2}}</h2>
+  <h2>Multiplicación ={{numero1 * numero2}}</h2>
+  <h2>Divicion ={{numero1 / numero2}}</h2>
+</div>
+
+</ul>
