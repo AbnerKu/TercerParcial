@@ -24,7 +24,7 @@ export class AppComponent {
   /** Declarar una funcion **/
 
   mostrar(){
-  
+    
     if (!this.visible) {
   
       this.visible=true;
